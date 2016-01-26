@@ -1,9 +1,9 @@
 Ruby RNCryptor
 --------------
 
-This is a Ruby port of Rob Napier's Cocoa [RNCryptor](https://github.com/rnapier/RNCryptor/) library. Like RNCryptor, Ruby RNCryptor intends to be an easy-to-use class that correctly handles random initialization vectors, password stretching with PBKDF2, and HMAC verification.
+This is a Ruby port of Rob Napier's Cocoa [RNCryptor](https://github.com/RNCryptor) library. Like RNCryptor, Ruby RNCryptor intends to be an easy-to-use class that correctly handles random initialization vectors, password stretching with PBKDF2, and HMAC verification.
 
-This port is based on his [Data Format](https://github.com/rnapier/RNCryptor/wiki/Data-Format) wiki page. It currently implements version 2 and version 3.
+This port is based on his [Data Format](https://github.com/RNCryptor/RNCryptor-Spec/blob/master/RNCryptor-Spec-v3.md) wiki page. It currently implements version 2 and version 3.
 
 Usage Example:
 --------------
@@ -24,6 +24,11 @@ Usage Example:
 Release Notes
 -------------
 
+2016-01-25 - version 3.0.1
+
+- Addressed a timing attack vulnerability by making the HMAC comparison constant time.
+- Updated the tests to use the newer rspec expect syntax.
+
 2013-12-20 - version 3.0
 
 - Generates version 3 file format files by default.
@@ -34,7 +39,7 @@ Generate and install as a gemfile
 ---------------------------------
 
 	gem build ruby_rncryptor.gemspec
-	gem install ./ruby_rncryptor-3.0.0.gem
+	gem install ./ruby_rncryptor-3.0.1.gem
 
 Credits
 -------
