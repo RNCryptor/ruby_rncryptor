@@ -8,21 +8,27 @@ This port is based on his [Data Format](https://github.com/RNCryptor/RNCryptor-S
 Usage Example:
 --------------
 
-    require './lib/ruby_rncryptor'
-    require "base64"
+```ruby
+require './lib/ruby_rncryptor'
+require "base64"
 
-    password = "n3v3r gue55!!"
-    encrypted = RubyRNCryptor.encrypt("This is a tiny bit of text to encrypt", password)
+password = "n3v3r gue55!!"
+encrypted = RubyRNCryptor.encrypt("This is a tiny bit of text to encrypt", password)
 
-    puts Base64.encode64(encrypted)
-    puts "Decrypting..."
+puts Base64.encode64(encrypted)
+puts "Decrypting..."
 
-    decrypted = RubyRNCryptor.decrypt(encrypted, password)
+decrypted = RubyRNCryptor.decrypt(encrypted, password)
 
-    puts decrypted
+puts decrypted
+```
 
 Release Notes
 -------------
+
+2017-04-01 - version 3.0.2
+
+- Fixed for OpenSSL deprecation warning.
 
 2016-01-25 - version 3.0.1
 
